@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
 function App() {
+  const [motorCycle, setMotorCycle] = React.useState(0)
+  const [lightVehicle, setLightVehicle] = React.useState(0)
+  const [heavyVehicle, setHeavyVehicle] = React.useState(0)
+
+  const handleInputChange = event => {
+    const data = event.target.value
+
+    setMotorCycle([...data].filter(l => parseInt(l) === 1).length)
+    setLightVehicle([...data].filter(l => parseInt(l) === 2).length)
+    setHeavyVehicle([...data].filter(l => parseInt(l) === 3).length)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <textarea onChange={handleInputChange} rows={5} style={{ width: '100%' }}></textarea>
+      <table>
+        <tbody>
+          <tr>
+            <td>Sepeda Motor</td>
+            <td>{motorCycle}</td>
+          </tr>
+          <tr>
+            <td>Kendaraan Ringan</td>
+            <td>{lightVehicle}</td>
+          </tr>
+          <tr>
+            <td>Kendaraan Berat</td>
+            <td>{heavyVehicle}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
