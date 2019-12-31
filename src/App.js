@@ -1,4 +1,5 @@
 import React from 'react'
+import { Textarea } from './Textarea'
 
 function App() {
   const [motorCycle, setMotorCycle] = React.useState(0)
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <textarea onChange={handleInputChange} rows={5} style={{ width: '100%' }}></textarea>
+      <Textarea onChange={handleInputChange} />
       <table>
         <tbody>
           <tr>
