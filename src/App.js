@@ -1,5 +1,6 @@
 import React from 'react'
 import { Textarea } from './Textarea'
+import { Table } from './Table'
 
 function App() {
   const [motorCycle, setMotorCycle] = React.useState(0)
@@ -19,26 +20,7 @@ function App() {
   return (
     <div>
       <Textarea onChange={handleInputChange} />
-      <table>
-        <tbody>
-          <tr>
-            <td>Sepeda Motor</td>
-            <td>{motorCycle}</td>
-          </tr>
-          <tr>
-            <td>Kendaraan Ringan</td>
-            <td>{lightVehicle}</td>
-          </tr>
-          <tr>
-            <td>Kendaraan Berat</td>
-            <td>{heavyVehicle}</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td>{total}</td>
-          </tr>
-        </tbody>
-      </table>
+      <Table motorCycle={motorCycle} lightVehicle={lightVehicle} heavyVehicle={heavyVehicle} total={total} />
     </div>
   )
 }
