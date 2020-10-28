@@ -9,7 +9,7 @@ function App() {
   const [heavyVehicle, setHeavyVehicle] = React.useState(0)
   const [total, setTotal] = React.useState(0)
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const data = event.target.value
 
     setMotorCycle([...data].filter((l) => parseInt(l) === 1).length)

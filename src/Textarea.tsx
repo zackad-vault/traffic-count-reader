@@ -1,7 +1,7 @@
 import React from 'react'
 
 type TextareaProps = {
-  onChange: (event: object) => void
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 export function Textarea(props: TextareaProps) {
