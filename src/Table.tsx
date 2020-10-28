@@ -1,7 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-function Table({ motorCycle, lightVehicle, heavyVehicle, total }) {
+type TableProps = {
+  motorCycle: number
+  lightVehicle: number
+  heavyVehicle: number
+  total: number
+}
+
+export function Table({ motorCycle, lightVehicle, heavyVehicle, total }: TableProps) {
   return (
     <table>
       <tbody>
@@ -25,12 +31,3 @@ function Table({ motorCycle, lightVehicle, heavyVehicle, total }) {
     </table>
   )
 }
-
-Table.propTypes = {
-  total: PropTypes.number,
-  motorCycle: PropTypes.number,
-  lightVehicle: PropTypes.number,
-  heavyVehicle: PropTypes.number,
-}
-
-export { Table }
