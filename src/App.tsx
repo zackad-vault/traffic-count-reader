@@ -6,10 +6,10 @@ import { Table } from './Table'
 import style from './App.module.css'
 
 function App() {
-  const [motorCycle, setMotorCycle] = React.useState(0)
-  const [lightVehicle, setLightVehicle] = React.useState(0)
-  const [heavyVehicle, setHeavyVehicle] = React.useState(0)
-  const [total, setTotal] = React.useState(0)
+  const [motorCycle, setMotorCycle] = useState(0)
+  const [lightVehicle, setLightVehicle] = useState(0)
+  const [heavyVehicle, setHeavyVehicle] = useState(0)
+  const [total, setTotal] = useState(0)
   const [rawData, setRawData] = useState({})
 
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
