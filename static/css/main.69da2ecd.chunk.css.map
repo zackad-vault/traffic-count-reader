@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.module.css"],"names":[],"mappings":"AAAA,gBACE,gBACF,CAEA,sBACE,gBAAiB,CACjB,aACF","file":"main.69da2ecd.chunk.css","sourcesContent":[".App {\n  padding-top: 1rem;\n}\n\n.container {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n"]}
